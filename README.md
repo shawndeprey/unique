@@ -1,4 +1,11 @@
+Unique
+======
+Unique is a space & evolution sim game being developed by Shawn Deprey with the help of Justin Hammond. The game uses Blackmodule Studio's newest game engine Firestorm.
+
 Firestorm
 =========
+https://github.com/andallas/Firestorm
 
-Firestorm is an HTML5/JavaScript game framework, who's goal is to provide a robust environment for game developers to easily create the games that they want to create. Modularity, and efficiency are some of the key goals of Firestorm. Firestorm utilizes Web Workers for concurrency in JavaScript. (Eventually)
+Contribution
+============
+Anybody can view the source for this game, but at this moment development efforts will remain with Shawn and Justin. However, suggestions are always welcome.
