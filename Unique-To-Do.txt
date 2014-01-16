@@ -1,0 +1,8 @@
+[ ] Kevin: I think the game idea is awesome. I think the issue of what keeps the user engaged when the ships
+are flying through space should be addressed.
+
+[X] Lance: I feel that if you reposition the stars when you moved them from one side of the screen to the 
+other, the effect would be much nicer.
+
+[X] Justin: I feel like if you weighted larger stare more generalls in the front depths the effect
+would be nicer.
