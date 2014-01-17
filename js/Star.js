@@ -5,7 +5,7 @@ function Star(options)
 	{
 		this.repositionOnX();
 		this.repositionOnY();
-		this.speed = 100
+		this.alpha = 0.5;
 	}
 
 	this.update = function(xMovement, yMovement)

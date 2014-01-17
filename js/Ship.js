@@ -3,7 +3,7 @@ function Ship(options)
 	this.set(options);
 	this.init = function()
 	{
-		this.speed = 1000;
+		this.speed = 500;
 	}
 
 	this.update = function()
