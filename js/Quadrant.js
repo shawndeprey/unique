@@ -4,7 +4,7 @@ function Quadrant(options)
 		// Position is required for this class
 		this.size = Universe.quadSize;
 		this.position = new Vec2({x: options.x * this.size, y: options.y * this.size});
-		this.anomaly = null;
+		this.anomaly = [];
 	}
 
 	this.init = function()
@@ -14,15 +14,23 @@ function Quadrant(options)
 
 	this.update = function()
 	{
-		if(this.anomaly != null){
-			this.anomaly.update();
+		for(var i = 0; i < this.anomaly.length; i++){
+			this.anomaly[i].update();
 		}
+	}
+
+	this.hasAnomalies = function(){
+		return (this.anomaly.length != 0);
+	}
+
+	this.addAnomaly = function(newAnomaly){
+		this.anomaly.push(newAnomaly);
 	}
 
 	this.draw = function()
 	{
-		if(this.anomaly != null){
-			this.anomaly.draw();
+		for(var i = 0; i < this.anomaly.length; i++){
+			this.anomaly[i].draw();
 		}
 
 		Firestorm.context.save();
@@ -60,14 +68,30 @@ function Quadrant(options)
 	this.generateAnomolies = function()
 	{
 		sVal = this.getSimplexValue();
-		if(sVal > 0.3 && sVal < 0.4){
-			this.anomaly = new Asteroid();
+		newAnomaly = null;
+
+// Value Mapping & Object Density Logic
+		if(sVal > 0.3 && sVal < 0.35){
+			newAnomaly = new Asteroid();
+		} else
+		if(sVal > 0.35 && sVal < 0.4){
+			newAnomaly = new Blackhole();
+		} else
+		if(sVal > 0.4 && sVal < 0.45){
+			newAnomaly = new StarObj();
+		} else
+		if(sVal > 0.45 && sVal < 0.5){
+			newAnomaly = new Planet();
+		} else
+		if(sVal > 0.5 && sVal < 0.55){
+			newAnomaly = new Comet();
 		}
 
-		if(this.anomaly != null){
-			this.anomaly.init({x:this.position.x, y:this.position.y});
-			this.anomaly.position.x += Math.random() * this.size;
-			this.anomaly.position.y += Math.random() * this.size;
+		if(newAnomaly != null){
+			newAnomaly.init({x:this.position.x, y:this.position.y});
+			newAnomaly.position.x += Math.random() * (this.size - newAnomaly.width);
+			newAnomaly.position.y += Math.random() * (this.size - newAnomaly.height);
+			this.addAnomaly(newAnomaly);
 		}
 	}
 	this.set(options);

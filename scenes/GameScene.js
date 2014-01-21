@@ -28,8 +28,8 @@ function GameScene()
 		stars.draw();
 		Firestorm.context.save();
 			GameScene.camera.draw();
-			ship.draw();
 			universe.draw();
+			ship.draw();
 		Firestorm.context.restore();
 	}
 }
