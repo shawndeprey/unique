@@ -6,7 +6,7 @@ function Ship(options)
 		// Weapon Attributes
 		this.weaponLevel = 1; // this should be hard to get a good mutation on
 		this.coneSize = 75; // degrees
-		this.fireRate = 200; // in milliseconds
+		this.fireRate = 2000; // in milliseconds
 		this.weaponDamage = 5; // Arbitrary numbers
 		this.weaponType = 1; // This does not just go up. It should mutate between 1 & n at random chance.
 		this.numberOfWeapons = 1; // Mutate between 1 - 4
