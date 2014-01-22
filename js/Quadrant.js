@@ -85,6 +85,12 @@ function Quadrant(options)
 		} else
 		if(sVal > 0.5 && sVal < 0.55){
 			newAnomaly = new Comet();
+		} else
+		if(sVal > 0.55 && sVal < 0.6){
+			newAnomaly = new Field();
+		} else
+		if(sVal > 0.6 && sVal < 0.65){
+			newAnomaly = new Supernova();
 		}
 
 		if(newAnomaly != null){

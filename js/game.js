@@ -15,6 +15,8 @@ document.write('<script src="js/Blackhole.js"></script>');
 document.write('<script src="js/StarObj.js"></script>');
 document.write('<script src="js/Planet.js"></script>');
 document.write('<script src="js/Comet.js"></script>');
+document.write('<script src="js/Field.js"></script>');
+document.write('<script src="js/Supernova.js"></script>');
 
 function Start()
 {
@@ -30,6 +32,11 @@ function Start()
 	Firestorm.assetManager.add("img/anomaly/planet/planet1.png");
 	Firestorm.assetManager.add("img/anomaly/star/star1.png");
 	Firestorm.assetManager.add("img/anomaly/comet/comet1.png");
+	Firestorm.assetManager.add("img/anomaly/field/emp_field1.png");
+	Firestorm.assetManager.add("img/anomaly/field/radiation_field1.png");
+	Firestorm.assetManager.add("img/anomaly/field/rock_field1.png");
+	Firestorm.assetManager.add("img/anomaly/field/ice_field1.png");
+	Firestorm.assetManager.add("img/anomaly/supernova/supernova1.png");
 
 // Load initial scene
 	Firestorm.run(GameScene);
